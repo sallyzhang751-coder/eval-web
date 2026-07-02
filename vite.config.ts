@@ -96,7 +96,11 @@ const localApiPlugin = () => ({
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/eval-web/',
+  base: process.env.NODE_ENV === 'production' ? '/eval-web/' : '/',
+  server: {
+    port: 5173,
+    open: true
+  },
   build: {
     sourcemap: 'hidden',
   },
