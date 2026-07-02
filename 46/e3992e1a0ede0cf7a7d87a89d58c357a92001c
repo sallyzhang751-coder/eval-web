@@ -1,0 +1,60 @@
+src/App.tsx
+  s_e0fa6f04550a86::t_7da024b2bb25eb 6 gitai:{"mixed_line_ranges":[],"operations":[{"operation_id":"6a461e909291a3b89a036627","tool_type":"agent","tool_id":"SearchReplace","line_ranges":[{"Single":6}]}]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "46e3992e1a0ede0cf7a7d87a89d58c357a92001c",
+  "prompts": {},
+  "sessions": {
+    "s_e0fa6f04550a86": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a46063d372831534fec6ad2",
+        "model": "gemini-3.1-pro__dev"
+      },
+      "human_author": "sallyzhang751-coder <sallyzhang751@gmail.com>"
+    }
+  },
+  "attestation_metadata": {
+    "src/App.tsx": [
+      {
+        "hash": "s_e0fa6f04550a86::t_7da024b2bb25eb",
+        "line_ranges": [
+          {
+            "Single": 6
+          }
+        ],
+        "mixed_line_ranges": [],
+        "operations": [
+          {
+            "operation_id": "6a461e909291a3b89a036627",
+            "tool_type": "agent",
+            "tool_id": "SearchReplace",
+            "line_ranges": [
+              {
+                "Single": 6
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "remote_transcripts": {
+    "s_e0fa6f04550a86": {
+      "tool": "trae",
+      "conversation_id": "6a46063d372831534fec6ad2",
+      "session_id": "6a46063d372831534fec6ad2",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    },
+    "s_e0fa6f04550a86::t_7da024b2bb25eb": {
+      "tool": "trae",
+      "conversation_id": "6a46063d372831534fec6ad2",
+      "session_id": "6a46063d372831534fec6ad2",
+      "status": "remote_only",
+      "message": "Remote transcript resolution is not implemented yet for TRAE prompts."
+    }
+  }
+}
