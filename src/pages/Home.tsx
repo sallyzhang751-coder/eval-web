@@ -34,6 +34,7 @@ export default function Home() {
   useEffect(() => {
     // Switch to fetch static JSON for GitHub Pages compatibility
     const dataUrl = import.meta.env.DEV ? '/api/questions' : `${import.meta.env.BASE_URL}questions.json`;
+
     fetch(dataUrl)
       .then(res => {
         if (!res.ok) throw new Error('Network response was not ok');
