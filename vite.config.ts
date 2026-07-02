@@ -96,6 +96,7 @@ const localApiPlugin = () => ({
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/eval-web/',
   build: {
     sourcemap: 'hidden',
   },

@@ -32,7 +32,8 @@ export default function Home() {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    fetch('/api/questions')
+    // Switch to fetch static JSON for GitHub Pages compatibility
+    fetch(`${import.meta.env.BASE_URL}questions.json`)
       .then(res => res.json())
       .then(data => {
         setQuestions(data);
@@ -74,7 +75,18 @@ export default function Home() {
     }
 
     try {
-      await fetch('/api/save', {
+      // In static deployment, we can't save to local file system
+      // For GitHub pages, we'll just log it and show success to user
+      // or you could connect this to a real backend later
+      console.log('Would save:', {
+        id: question.id,
+        selectedSource,
+        reason,
+        selectedSide
+      });
+      
+      // Still try to call local API in case we are running locally
+      fetch('/api/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -83,7 +95,11 @@ export default function Home() {
           reason,
           selectedSide
         })
+      }).catch(() => {
+        // Ignore error if endpoint doesn't exist (like on GH Pages)
+        console.log('Running in static mode, results are only logged to console.');
       });
+      
       handleNext();
     } catch (err) {
       console.error(err);
